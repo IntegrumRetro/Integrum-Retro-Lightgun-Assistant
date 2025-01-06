@@ -2,7 +2,7 @@
 <GameProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <GameName>SEGA Golden Gun</GameName>
   <GameGenre>Shooter</GameGenre>
-  <GamePath>###TP_GAME_ROOT_DIR###\Sega Golden Gun\exe\RingGunR_RingWide.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\GG.teknoparrot\exe\RingGunR_RingWide.exe</GamePath>
   <TestMenuParameter>TestMode.exe</TestMenuParameter>
   <TestMenuIsExecutable>true</TestMenuIsExecutable>
   <ExtraParameters />

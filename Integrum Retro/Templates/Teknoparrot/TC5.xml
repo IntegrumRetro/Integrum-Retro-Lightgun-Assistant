@@ -2,7 +2,7 @@
 <GameProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <GameName>Time Crisis 5</GameName>
   <GameGenre>Shooter</GameGenre>
-  <GamePath>###TP_GAME_ROOT_DIR###\Time Crisis 5\RSLauncher.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\TC5.teknoparrot\RSLauncher.exe</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

@@ -3,7 +3,7 @@
   <ProfileName>ElevatorActionInvasion</ProfileName>
   <GameNameInternal>Elevator Action Invasion</GameNameInternal>
   <GameGenreInternal>Shooter</GameGenreInternal>
-  <GamePath>###TP_GAME_ROOT_DIR###\Elevator Action Invasion\ESGame\Binaries\Win64\ESGame-Win64-Shipping.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\ElevatorActionInvasion.teknoparrot\ESGame\Binaries\Win64\ESGame-Win64-Shipping.exe</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

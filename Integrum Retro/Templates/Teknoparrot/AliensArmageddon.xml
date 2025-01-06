@@ -2,7 +2,7 @@
 <GameProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <GameName>Aliens Armageddon</GameName>
   <GameGenre>Shooting</GameGenre>
-  <GamePath>###TP_GAME_ROOT_DIR###\Aliens Armageddon\game</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\AliensExtermination.teknoparrot\game</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

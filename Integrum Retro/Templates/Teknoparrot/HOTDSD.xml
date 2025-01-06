@@ -2,7 +2,7 @@
 <GameProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <GameName>House of the Dead: Scarlet Dawn</GameName>
   <GameGenre>Shooter</GameGenre>
-  <GamePath>###TP_GAME_ROOT_DIR###\House of the Dead Scarlet Dawn\Hodzero\WindowsNoEditor\Hodzero\Binaries\Win64\Hodzero-Win64-Shipping.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\HOTDSD.teknoprrot\Hodzero\WindowsNoEditor\Hodzero\Binaries\Win64\Hodzero-Win64-Shipping.exe</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

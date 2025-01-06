@@ -2,7 +2,7 @@
 <GameProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <GameName>The House of the Dead 4</GameName>
   <GameGenre>Shooter</GameGenre>
-  <GamePath>###TP_GAME_ROOT_DIR###\House of the Dead 4\disk0\elf\hod4M.elf</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\HOTD4.teknoparrot\disk0\elf\hod4M.elf</GamePath>
   <TestMenuParameter>hod4testM.elf</TestMenuParameter>
   <TestMenuIsExecutable>true</TestMenuIsExecutable>
   <ExtraParameters />

@@ -3,7 +3,7 @@
   <ProfileName>BBHWorld</ProfileName>
   <GameNameInternal>Big Buck Hunter World</GameNameInternal>
   <GameGenreInternal>Shooter</GameGenreInternal>
-  <GamePath>###TP_GAME_ROOT_DIR###\Big Buck Hunter World\game</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\BBHWorld.teknoparrot\game</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

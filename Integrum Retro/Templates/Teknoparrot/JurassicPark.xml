@@ -3,7 +3,7 @@
   <ProfileName>JurassicPark</ProfileName>
   <GameNameInternal>Jurassic Park</GameNameInternal>
   <GameGenreInternal>Shooter</GameGenreInternal>
-  <GamePath>###TP_GAME_ROOT_DIR###\Jurassic Park\game</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\JurassicPark.teknoparrot\game</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

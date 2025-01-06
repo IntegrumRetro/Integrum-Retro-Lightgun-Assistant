@@ -3,7 +3,7 @@
   <ProfileName>GhostBusters</ProfileName>
   <GameNameInternal>GhostBusters</GameNameInternal>
   <GameGenreInternal>Shooter</GameGenreInternal>
-  <GamePath>###TP_GAME_ROOT_DIR###\Ghostbusters\pm\game</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\Ghostbusters.teknoparrot\pm\game</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

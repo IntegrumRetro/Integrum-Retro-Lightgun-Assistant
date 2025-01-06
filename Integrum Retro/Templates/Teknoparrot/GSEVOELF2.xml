@@ -3,7 +3,7 @@
   <ProfileName>GSEVOELF2</ProfileName>
   <GameNameInternal>Ghost Squad Evolution (Elfloader2)</GameNameInternal>
   <GameGenreInternal>Shooter</GameGenreInternal>
-  <GamePath>###TP_GAME_ROOT_DIR###\Ghost Squad Evolution\vsg_l\vsg</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\GSEVO.teknoparrot\vsg_l\vsg</GamePath>
   <TestMenuParameter>-t</TestMenuParameter>
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

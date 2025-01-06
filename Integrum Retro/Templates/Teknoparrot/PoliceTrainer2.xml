@@ -3,7 +3,7 @@
   <ProfileName>PoliceTrainer2</ProfileName>
   <GameNameInternal>Police Trainer 2</GameNameInternal>
   <GameGenreInternal>Shooter</GameGenreInternal>
-  <GamePath>###TP_GAME_ROOT_DIR###\Police Trainer 2\pt2s_g11</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\PoliceTrainer2.teknoparrot\pt2s_g11</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

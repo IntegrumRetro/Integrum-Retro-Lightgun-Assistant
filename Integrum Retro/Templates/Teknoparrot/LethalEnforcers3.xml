@@ -2,7 +2,7 @@
 <GameProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <GameName>Lethal Enforcers 3</GameName>
   <GameGenre>Shooter</GameGenre>
-  <GamePath>###TP_GAME_ROOT_DIR###\Lethal Enforcers 3\Lethal Enforcers 3 Partition 1\D22\game.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\LethalEnforcers3.teknoparrot\Lethal Enforcers 3 Partition 1\D22\game.exe</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

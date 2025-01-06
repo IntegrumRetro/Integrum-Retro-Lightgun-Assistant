@@ -2,7 +2,7 @@
 <GameProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <GameName>Silent Hill: The Arcade</GameName>
   <GameGenre>Shooter</GameGenre>
-  <GamePath>###TP_GAME_ROOT_DIR###\SIlent Hill The Arcade\GHL\bin\KSHG\KSHG.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\SIlentHill.teknoparrot\GHL\bin\KSHG\KSHG.exe</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

@@ -3,7 +3,7 @@
   <ProfileName>Gunslinger</ProfileName>
   <GameNameInternal>Gunslinger Stratos 3</GameNameInternal>
   <GameGenreInternal>Shooter</GameGenreInternal>
-  <GamePath>###TP_GAME_ROOT_DIR###\Gunslinger Stratos 3\game.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\Gunslinger.teknoparrot\game.exe</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

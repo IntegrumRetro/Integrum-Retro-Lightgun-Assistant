@@ -2,7 +2,7 @@
 <GameProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <GameName>Castlevania: The Arcade</GameName>
   <GameGenre>Shooter</GameGenre>
-  <GamePath>###TP_GAME_ROOT_DIR###\Castlevania The Arcade\HCV\HCV_APP\HCV.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\Castlevania.teknoparrot\HCV\HCV_APP\HCV.exe</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

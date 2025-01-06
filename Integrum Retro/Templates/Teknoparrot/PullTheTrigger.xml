@@ -3,7 +3,7 @@
   <ProfileName>PullTheTrigger</ProfileName>
   <GameNameInternal>Pull The Trigger</GameNameInternal>
   <GameGenreInternal>Shooter</GameGenreInternal>
-  <GamePath>###TP_GAME_ROOT_DIR###\Pull The Trigger\PTW.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\PullTheTrigger.teknoparrot\PTW.exe</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />
