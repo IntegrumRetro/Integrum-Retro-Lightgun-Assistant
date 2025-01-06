@@ -2,7 +2,7 @@
 <GameProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <GameName>America's Army Arcade</GameName>
   <GameGenre>Shooter</GameGenre>
-  <GamePath>\Launchbox\Games\Teknoparrot Lightgun\Americas Army\System\armyops-bin</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\Americas Army\System\armyops-bin</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

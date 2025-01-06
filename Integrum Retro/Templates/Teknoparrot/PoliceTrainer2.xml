@@ -3,7 +3,7 @@
   <ProfileName>PoliceTrainer2</ProfileName>
   <GameNameInternal>Police Trainer 2</GameNameInternal>
   <GameGenreInternal>Shooter</GameGenreInternal>
-  <GamePath>\Launchbox\Games\Teknoparrot Lightgun\Police Trainer 2\pt2s_g11</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\Police Trainer 2\pt2s_g11</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />
@@ -658,7 +658,7 @@
   <ExecutableName2>pt2snd.f7</ExecutableName2>
   <HasTwoExecutables>true</HasTwoExecutables>
   <LaunchSecondExecutableFirst>true</LaunchSecondExecutableFirst>
-  <GamePath2>\Launchbox\Games\Teknoparrot Lightgun\Police Trainer 2\pt2snd.f7</GamePath2>
+  <GamePath2>###TP_GAME_ROOT_DIR###\Police Trainer 2\pt2snd.f7</GamePath2>
   <GamePath2 />
   <xAxisMin>0</xAxisMin>
   <xAxisMax>255</xAxisMax>

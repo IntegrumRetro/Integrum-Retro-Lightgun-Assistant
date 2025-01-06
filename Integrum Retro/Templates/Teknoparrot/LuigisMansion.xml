@@ -2,7 +2,7 @@
 <GameProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <GameName>Luigi's Mansion Arcade</GameName>
   <GameGenre>Shooter</GameGenre>
-  <GamePath>\Launchbox\Games\Teknoparrot Lightgun\Luigi's Mansion Arcade\exe\x64\VACUUM.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\Luigi's Mansion Arcade\exe\x64\VACUUM.exe</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

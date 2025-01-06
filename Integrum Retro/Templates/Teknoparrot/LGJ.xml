@@ -2,7 +2,7 @@
 <GameProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <GameName>Let's Go Jungle: Lost on the Island of Spice</GameName>
   <GameGenre>Shooter</GameGenre>
-  <GamePath>\Launchbox\Games\Teknoparrot Lightgun\Let's Go Jungle! Lost on the Island of Spice\lgj_final</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\Let's Go Jungle! Lost on the Island of Spice\lgj_final</GamePath>
   <TestMenuParameter>-t</TestMenuParameter>
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

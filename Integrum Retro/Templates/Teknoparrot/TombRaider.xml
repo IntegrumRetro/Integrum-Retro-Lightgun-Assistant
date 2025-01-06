@@ -3,7 +3,7 @@
   <ProfileName>TombRaider</ProfileName>
   <GameNameInternal>Tomb Raider</GameNameInternal>
   <GameGenreInternal>Shooter</GameGenreInternal>
-  <GamePath>\Launchbox\Games\Teknoparrot Lightgun\Tomb Raider\Game\Game.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\Tomb Raider\Game\Game.exe</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

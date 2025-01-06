@@ -2,7 +2,7 @@
 <GameProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <GameName>Operation G.H.O.S.T.</GameName>
   <GameGenre>Shooter</GameGenre>
-  <GamePath>\Launchbox\Games\Teknoparrot Lightgun\Operation GHOST\gs2.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\Operation GHOST\gs2.exe</GamePath>
   <TestMenuParameter>-testmode</TestMenuParameter>
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

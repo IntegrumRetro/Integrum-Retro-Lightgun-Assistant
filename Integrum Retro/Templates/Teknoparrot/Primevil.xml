@@ -2,7 +2,7 @@
 <GameProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <GameName>Primeval Hunt</GameName>
   <GameGenre>Shooter</GameGenre>
-  <GamePath>\Launchbox\Games\Teknoparrot Lightgun\Primevil\primevil\disk0\prog\main.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\Primevil\primevil\disk0\prog\main.exe</GamePath>
   <TestMenuParameter>-t</TestMenuParameter>
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

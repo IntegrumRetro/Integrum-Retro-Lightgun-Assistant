@@ -405,6 +405,9 @@ CreateTeknoparrotConfig(Game)
 
     LogDebug("INFO", "Rewriting Teknoparrot profiles..")
 	; Iterate over user profile templates and create user profiles
+	
+	IniRead, TP_GAME_ROOT_DIR, IntegrumRetro.ini, TEKNOPARROT, TP_GAME_ROOT_DIR
+	
     Loop, Files, %TP_USER_TEMPLATE_DIR%\*.xml
     {
 		ProfileTemplate := A_LoopFileLongPath
@@ -418,6 +421,7 @@ CreateTeknoparrotConfig(Game)
 		newContent := StrReplace(Content, "###LIGHTGUN1###", TP_GUNP1_HID)
 
 		; Replace placeholders in profile content
+		newContent := StrReplace(newContent, "###TP_GAME_ROOT_DIR###", TP_GAME_ROOT_DIR)
 		newContent := StrReplace(newContent, "###LIGHTGUN1###", TP_GUNP1_HID)
 		newContent := StrReplace(newContent, "###LIGHTGUN1 NAME###", GUNP1_TYPE)
 		newContent := StrReplace(newContent, "###LIGHTGUN1 LeftButton###", GUNP1_TYPE "LeftButton")

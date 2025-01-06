@@ -2,7 +2,7 @@
 <GameProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <GameName>Transformers: Human Alliance</GameName>
   <GameGenre>Shooter</GameGenre>
-  <GamePath>\Launchbox\Games\Teknoparrot Lightgun\Transformers - Human Alliance\exe\TF_Gun_R_Ring_dumped.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\Transformers - Human Alliance\exe\TF_Gun_R_Ring_dumped.exe</GamePath>
   <TestMenuParameter>TestMode.exe</TestMenuParameter>
   <TestMenuIsExecutable>true</TestMenuIsExecutable>
   <ExtraParameters />
