@@ -1,0 +1,13 @@
+<mamelayout version="2">
+  <element name="bezel">
+    <image file="bezel.png" />
+  </element>
+  <view name="Bezel Artwork">
+    <element ref="bezel">
+      <bounds left="0" top="0" right="16" bottom="9" />
+    </element>
+    <screen index="0">
+      <bounds left="4.625" top="0" right="11.375" bottom="9" />
+    </screen>
+  </view>
+</mamelayout>

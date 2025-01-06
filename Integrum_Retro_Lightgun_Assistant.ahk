@@ -12,6 +12,8 @@ Global Version := 2.0
 
 Global GUNP1_POS		:= "" ; Player 1 GUN ID Position
 Global GUNP2_POS		:= "" ; Player 2 GUN ID Position
+Global GUNP3_POS		:= "" ; Player 3 GUN ID Position
+Global GUNP4_POS		:= "" ; Player 4 GUN ID Position
 Global GUNP1_TYPE 		:= "" ; Brand Name ex. Sinden Lightgun Black
 Global GUNP2_TYPE 		:= "" ; Brand Name ex. Arduino LLC GUN4IR Pro Micro P1
 Global GUNP3_TYPE		:= ""
@@ -41,7 +43,7 @@ Main(Args) {
 
 
     If (!SystemParameter1 || SystemParameter1 = "version") {
-        MsgBox, Integrum Retro Util v%version% by Jasen Baker (jasen@integrumretro.com)
+        MsgBox, Integrum Retro Lightgun Assistant v%version% by Jasen Baker (jasen@integrumretro.com)
         ExitApp
     }
 
@@ -107,7 +109,7 @@ help   - Show this help menu.
             }
 
             ; Show a GUI message if no guns are detected, doesn't create a forced input box that breaks BigBox
-            If (GUNS = 4) {
+            If (GUNS = 0) {
                 Gui, +AlwaysOnTop +ToolWindow -Caption
                 Gui, Font, s20  ; Set font size to 20pt
                 Gui, Add, Text, w600 h200, No lightguns detected!`n`nThis is a lightgun-only game.`nPlease plug in your lightguns and try again.`n`nThis message will self-destruct in 5 seconds.
@@ -126,96 +128,71 @@ help   - Show this help menu.
 
 FindLightguns()
 {
+    SizeofRawInputDeviceList := A_PtrSize * 2
+    SizeofRawInputDevice := 8 + A_PtrSize
+    RIM_TYPEMOUSE := 0
+    RIDI_DEVICENAME := 0x20000007
 
-	SizeofRawInputDeviceList 	:= A_PtrSize * 2
-	SizeofRawInputDevice 		:= 8 + A_PtrSize
-	DetectedSindenCount 		:= 0
-	RIM_TYPEMOUSE				:= 0
-	RIDI_DEVICENAME				:= 0x20000007
-	
-	mouse := 1 ; Counts how many lightguns there are
+    mouse := 1 ; Counts how many mouse devices found
+    Res := DllCall("GetRawInputDeviceList", "Ptr", 0, "UInt*", Count, UInt, SizeofRawInputDeviceList)
+    VarSetCapacity(RawInputList, SizeofRawInputDeviceList * Count)
+    Res := DllCall("GetRawInputDeviceList", "Ptr", &RawInputList, "UInt*", Count, "UInt", SizeofRawInputDeviceList)
 
-	Res := DllCall("GetRawInputDeviceList", "Ptr", 0, "UInt*", Count, UInt, SizeofRawInputDeviceList)
+    LogDebug("DEBUG", "Device IDs found in Enumerated Order")
+    LogDebug("DEBUG", "------------------------------------")
 
-	VarSetCapacity(RawInputList, SizeofRawInputDeviceList * Count)
+    Loop %Count%
+    {
+        Handle := NumGet(RawInputList, (A_Index - 1) * SizeofRawInputDeviceList, "UInt")
+        Type := NumGet(RawInputList, ((A_Index - 1) * SizeofRawInputDeviceList) + A_PtrSize, "UInt")
 
-	Res := DllCall("GetRawInputDeviceList", "Ptr", &RawInputList, "UInt*", Count, "UInt", SizeofRawInputDeviceList)
+        ; Process only RIM_TYPEMOUSE devices
+        If (Type = RIM_TYPEMOUSE)
+        {
+            Res := DllCall("GetRawInputDeviceInfo", "Ptr", Handle, "UInt", RIDI_DEVICENAME, "Ptr", 0, "UInt *", nLength)
+            VarSetCapacity(Name, (nLength + 1) * 2)
+            Res := DllCall("GetRawInputDeviceInfo", "Ptr", Handle, "UInt", RIDI_DEVICENAME, "Str", Name, "UInt*", nLength)
+            LogDebug("DEBUG", "Mouse/Lightgun " . Name)
 
-	LogDebug("DEBUG", "Device IDs found in Enumerated Order")
-	LogDebug("DEBUG", "------------------------------------")
+            ; Read lightgun definitions from INI
+            If FileExist("IntegrumRetro.ini")
+                IniRead, DeviceID, IntegrumRetro.ini, LIGHTGUNS
+            Else
+            {
+                MsgBox, FATAL: IntegrumRetro.ini not found, cannot obtain lightgun list
+                ExitApp
+            }
 
-	
-	Loop %Count%
-	{
-			Handle := NumGet(RawInputList, (A_Index - 1) * SizeofRawInputDeviceList, "UInt")
+            ; Match device with INI definitions
+            Loop, parse, DeviceID, `n
+            {
+                parts := StrSplit(A_LoopField, "=")
+                DeviceHidVid := parts[1]
+                DeviceDescription := parts[2]
 
-			Type := NumGet(RawInputList, ((A_Index - 1) * SizeofRawInputDeviceList) + A_PtrSize, "UInt")
-			
-		If (Type = RIM_TYPEMOUSE)
-		{
-			Res := DllCall("GetRawInputDeviceInfo", "Ptr", Handle, "UInt", RIDI_DEVICENAME, "Ptr", 0, "UInt *", nLength)
+                If Instr(Name, DeviceHidVid)
+                {
+                    GUNS += 1
+					GUNP%mouse%_POS := mouse
+                    GUNP%mouse%_HID := Name
+                    GUNP%mouse%_TYPE := DeviceDescription
+                    mouse += 1
+                }
+            }
+        }
+    }
 
-			VarSetCapacity(Name, (nLength + 1) * 2)
-			
-			Res := DllCall("GetRawInputDeviceInfo", "Ptr", Handle, "UInt", RIDI_DEVICENAME, "Str", Name, "UInt*", nLength)
-			
-			LogDebug("DEBUG", "Mouse/Lightgun " . Name)
-	
-			If FileExist("IntegrumRetro.ini")
-			{
-				IniRead, DeviceID, IntegrumRetro.ini, LIGHTGUNS
-			}
-			
-			Else
-			{
-				MsgBox, FATAL: IntegrumRetro.ini not found, cannot obtain lightgun list
-				ExitApp
-			}
-			
-			Loop, parse, DeviceID, `n
-			{
-				parts := StrSplit(A_LoopField, "=")
-				DeviceHidVid	:= parts[1]
-				DeviceDescription	:= parts[2]
-				If Instr(Name, DeviceHidVid)
-				{
-					GUNS += 1
-					GUNP%GUNS%_POS := mouse
-					GUNP%GUNS%_HID := Name
-					GUNP%GUNS%_TYPE := DeviceDescription
-				}
-			}
-		
-		mouse+=1
-		}
-	}
-
-	; Swapping GUN order positions because any second gun plugged in appears first in enumeration, thus changing the device order
-	If (GUNS = 2)
-		{
-			SWAP_P1_POS := GUNP2_POS
-			SWAP_P2_POS := GUNP1_POS
-			SWAP_P1_TYPE := GUNP2_TYPE
-			SWAP_P2_TYPE := GUNP1_TYPE
-			SWAP_P1_HID := GUNP2_HID
-			SWAP_P2_HID := GUNP1_HID
-			GUNP1_POS := SWAP_P1_POS
-			GUNP2_POS := SWAP_P2_POS
-			GUNP1_TYPE := SWAP_P1_TYPE
-			GUNP2_TYPE := SWAP_P2_TYPE
-			GUNP1_HID := SWAP_P1_HID
-			GUNP2_HID := SWAP_P2_HID
-		}
-	
-		LogDebug("DEBUG", "Lightgun Player 1 index: " . GUNP1_POS . " type: " . GUNP1_TYPE . " name: " . GUNP1_HID)
-		LogDebug("DEBUG", "Lightgun Player 2 index: " . GUNP2_POS . " type: " . GUNP2_TYPE . " name: " . GUNP2_HID)
-		LogDebug("DEBUG", "Lightgun Player 3 index: " . GUNP3_POS . " type: " . GUNP3_TYPE . " name: " . GUNP3_HID)
-		LogDebug("DEBUG", "Lightgun Player 4 index: " . GUNP4_POS . " type: " . GUNP4_TYPE . " name: " . GUNP4_HID)
-		
-		LogDebug("DEBUG", "Total Guns: " . GUNS)
-		
-Return
+    ; Log the assigned lightguns
+    LogDebug("DEBUG", "Lightgun Player 1 index: " . GUNP1_POS . " type: " . GUNP1_TYPE . " name: " . GUNP1_HID)
+    LogDebug("DEBUG", "Lightgun Player 2 index: " . GUNP2_POS . " type: " . GUNP2_TYPE . " name: " . GUNP2_HID)
+    LogDebug("DEBUG", "Lightgun Player 3 index: " . GUNP3_POS . " type: " . GUNP3_TYPE . " name: " . GUNP3_HID)
+    LogDebug("DEBUG", "Lightgun Player 4 index: " . GUNP4_POS . " type: " . GUNP4_TYPE . " name: " . GUNP4_HID)
+    LogDebug("DEBUG", "Total Guns: " . (mouse - 1))
+    Return
 }
+
+
+
 
 CreateMAMEConfig()
 {
@@ -330,7 +307,7 @@ CreateDemulshooterConfig()
 
         ; Initialize newContent with the template content
         newContent := Content
-        
+
         ; Replace light gun placeholders based on the number of guns configured (GUNS variable)
         Loop % GUNS
         {
@@ -502,7 +479,7 @@ StartSindenSoftware()
 			ExitApp
 		}
 		
-		SINDEN_BACKUP_FILE := SINDEN_BACKUP_FILE . ".backup"
+		SINDEN_BACKUP_FILE := SINDEN_CONFIG_FILE . ".backup"
 		
 		FileCopy, %SINDEN_CONFIG_FILE%, %SINDEN_BACKUP_FILE%, 1
 		FileRead, xmldata, %SINDEN_CONFIG_FILE%
@@ -569,6 +546,7 @@ StopSindenSoftware()
     If (ErrorLevel) 
     {
         Process, Close, Lightgun.exe
+		Run, taskkill /im "Lightgun.exe" /F,, Hide
         Sleep 2000
         
         LogDebug("INFO", "Sinden Software terminated")
