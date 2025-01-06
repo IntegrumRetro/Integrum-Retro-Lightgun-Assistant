@@ -406,15 +406,24 @@ CreateTeknoparrotConfig(Game)
     LogDebug("INFO", "Rewriting Teknoparrot profiles..")
 	; Iterate over user profile templates and create user profiles
 	
-	IniRead, TP_GAME_ROOT_DIR, IntegrumRetro.ini, TEKNOPARROT, TP_GAME_ROOT_DIR
+	
 	
     Loop, Files, %TP_USER_TEMPLATE_DIR%\*.xml
-    {
+    {		
 		ProfileTemplate := A_LoopFileLongPath
 		FileName := A_LoopFileName
-        UserProfile := TP_USER_PROFILE_DIR . "\" . A_LoopFileName
+        
+		IniRead, TP_GAME_ROOT_DIR, IntegrumRetro.ini, TEKNOPARROT_GAME_PATH, %FileName%
+
+		If (ErrorLevel)
+		{
+			LogDebug("ERROR", "Failed to find folder path for " . FileName . " at " TP_GAME_ROOT_DIR)
+		}
 		
-		LogDebug("DEBUG", "Rewriting Teknoparrot " . Filename)
+		UserProfile := TP_USER_PROFILE_DIR . "\" . A_LoopFileName
+		
+		
+		LogDebug("DEBUG", "Rewriting Teknoparrot " . FileName)
 
 		FileRead, Content, %TP_USER_TEMPLATE_DIR%\%FileName%
 		

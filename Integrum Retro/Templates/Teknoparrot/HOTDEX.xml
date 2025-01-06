@@ -2,7 +2,7 @@
 <GameProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <GameName>The House of the Dead EX</GameName>
   <GameGenre>Shooter</GameGenre>
-  <GamePath>###TP_GAME_ROOT_DIR###\House of the Dead Ex\disk0\elf\hodexRI.elf</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\disk0\elf\hodexRI.elf</GamePath>
   <TestMenuParameter>hodextestR.elf</TestMenuParameter>
   <TestMenuIsExecutable>true</TestMenuIsExecutable>
   <ExtraParameters />

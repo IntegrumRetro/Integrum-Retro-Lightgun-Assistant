@@ -3,7 +3,7 @@
   <ProfileName>WalkingDead</ProfileName>
   <GameNameInternal>Walking Dead</GameNameInternal>
   <GameGenreInternal>Shooter</GameGenreInternal>
-  <GamePath>###TP_GAME_ROOT_DIR###\Walking Dead\pm\game</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\pm\game</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

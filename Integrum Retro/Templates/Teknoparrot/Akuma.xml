@@ -3,7 +3,7 @@
   <ProfileName>Akuma</ProfileName>
   <GameNameInternal>Akuma</GameNameInternal>
   <GameGenreInternal>Shooter</GameGenreInternal>
-  <GamePath>###TP_GAME_ROOT_DIR###\Akuma Mortis Immortal\data\game.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\data\game.exe</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />

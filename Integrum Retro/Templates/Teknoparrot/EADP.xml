@@ -3,7 +3,7 @@
   <ProfileName>EADP</ProfileName>
   <GameNameInternal>Elevator Action Death Parade</GameNameInternal>
   <GameGenreInternal>Shooter</GameGenreInternal>
-  <GamePath>###TP_GAME_ROOT_DIR###\Elevator Action Death Parade\Game.exe</GamePath>
+  <GamePath>###TP_GAME_ROOT_DIR###\Game.exe</GamePath>
   <TestMenuParameter />
   <TestMenuIsExecutable>false</TestMenuIsExecutable>
   <ExtraParameters />
